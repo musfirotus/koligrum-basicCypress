@@ -1,0 +1,36 @@
+{
+  "name": "basiccypress",
+  "version": "1.0.0",
+  "description": "Basic Cypress Implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/cypress run --spec 'cypress/integration/**/*.feature' --browser chrome",
+    "cypress:open": "cypress open",
+    "cypress-tags": "./node_modules/.bin/cypress-tags",
+    "reporter": "node cypress/support/reporter"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/musfirotus/koligrum-basicCypress.git"
+  },
+  "author": "Musfirotus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/musfirotus/koligrum-basicCypress/issues"
+  },
+  "homepage": "https://github.com/musfirotus/koligrum-basicCypress#readme",
+  "devDependencies": {
+    "cypress": "^8.3.1",
+    "cypress-cucumber-preprocessor": "^4.2.0",
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
